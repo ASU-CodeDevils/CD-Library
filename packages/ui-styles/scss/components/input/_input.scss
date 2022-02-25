@@ -1,0 +1,92 @@
+@import "../../lib/colors";
+@import "../../lib/fonts";
+@import "../../lib/mixins";
+@import "../../lib/variables";
+
+// standard input
+@mixin input {
+    &.input {
+        position: relative;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+
+        &, input {
+            border: none;
+            @include border-radius;
+            font: $font-paragraph;
+            min-height: 35px;
+            min-width: 150px;
+        }
+
+        input {
+            color: lighten($color-primary, 10%);
+            max-width: 100%;
+            outline: 2px solid $color-bubbly-blue;
+            padding: 0 40px 0 20px;
+            transition: all $transition-time ease-in;
+        }
+
+        .icon {
+            color: lighten($color-primary, 50%);
+            display: inline-block;
+            position: absolute;
+            right: 1em;
+            top: 25%;
+            transition: color $transition-time ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &:hover, &:focus {
+            input {
+                color: $color-primary;
+                outline-width: 4px;
+            }
+
+            .icon {
+                color: $color-primary;
+            }
+        }
+
+        &.inverted {
+            input {
+                background-color: lighten($color-background-inverted, 5%);
+                color: lighten($color-primary-inverted, 50%);
+            }
+
+            .icon {
+                color: lighten($color-new-navy, 50%);
+            }
+
+            &:hover, &:focus {
+                input, .icon {
+                    color: $color-primary-inverted;
+                }
+            }
+
+            &.disabled {
+                &:hover {
+                    cursor: not-allowed;
+                }
+            }
+        }
+
+        &.disabled {
+            &, input {
+                outline-width: 1px;
+                background-color: lighten($color-new-navy, 50%);
+
+                &:hover, &:focus, .icon:hover, .icon:focus {
+                    cursor: not-allowed;
+                }
+            }
+
+            .icon {
+                color: lighten($color-primary, 50%);
+            }
+        }
+    }
+}

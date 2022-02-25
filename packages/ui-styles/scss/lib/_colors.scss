@@ -1,0 +1,34 @@
+// brand colors
+$color-kewl-blue: #057fa8;
+$color-bubbly-blue: #07a6db;
+$color-new-navy: #2f3940;
+$color-shady-grey: #333333;
+$color-better-black: #1a1a1a;
+
+// base colors
+$color-red: #FC354E;
+$color-orange: #FC7A35;
+$color-yellow: #FCF235;
+$color-green: #6AFC35;
+$color-blue: $color-kewl-blue;
+$color-black: $color-better-black;
+$color-white: #F5F5F5;
+
+$color-blue-1: $color-blue;
+$color-blue-2: #034D66;
+
+$color-grey-1: $color-new-navy;
+$color-grey-2: $color-shady-grey;
+
+// site colors
+$color-primary: $color-black;
+$color-primary-light: $color-primary;
+$color-primary-inverted: $color-white;
+
+$color-secondary: $color-bubbly-blue;
+$color-secondary-light: $color-secondary;
+$color-secondary-inverted: $color-secondary;
+
+$color-background: $color-white;
+$color-background-light: $color-background;
+$color-background-inverted: $color-black;

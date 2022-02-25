@@ -1,0 +1,25 @@
+// font sizes
+$font-size-paragraph: 18px;
+$line-height-paragraph: $font-size-paragraph * 1.5;
+$font-size-small: 14px;
+$line-height-small: $font-size-small * 1.5;
+$font-size-bold: 20px;
+
+$font-size-header-1: 60px;
+$line-height-header-1: $font-size-header-1 * 1.5;
+$font-size-header-2: 45px;
+$line-height-header-2: $font-size-header-2 * 1.5;
+$font-size-header-3: 35px;
+$line-height-header-3: $font-size-header-3 * 1.5;
+
+// font families
+$font-family-header: acumin-pro, sans-serif;
+$font-family-paragraph: arial, sans-serif;
+
+// font
+$font-heading-1: normal normal 700 60px/72px $font-family-header;
+$font-heading-2: normal normal 700 45px/60px $font-family-header;
+$font-heading-3: normal normal 700 35px/48px $font-family-header;
+
+$font-paragraph: normal normal 400 18px/24px $font-family-paragraph;
+$font-subtitle: normal normal 100 14px/20px $font-family-paragraph;

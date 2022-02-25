@@ -1,0 +1,24 @@
+{
+  "name": "@cd/ui-styles",
+  "version": "1.0.0",
+  "description": "Styling for the CodeDevils React component library",
+  "author": "Kevin Shelley <kevin.shelley@pm.me>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "node-sass scss -o dist --output-style compressed",
+    "sass": "node-sass --watch scss -o dist --output-style compressed"
+  },
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

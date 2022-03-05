@@ -62,7 +62,7 @@ npx lerna run storybook
 Or you can run the React project inside the `@cd/ui-storybook` project:
 
 ```
-npx run start
+npx lerna run start
 ```
 
 This is nothing more than a playground for you to add components from the component library

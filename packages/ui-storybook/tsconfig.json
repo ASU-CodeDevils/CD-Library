@@ -2,7 +2,8 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "lib": ["DOM", "DOM.Iterable", "ES5", "ES6"]
   },
   "include": ["./src"]
 }

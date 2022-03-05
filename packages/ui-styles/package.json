@@ -10,14 +10,15 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": [
-    "lib"
-  ],
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "build": "node-sass scss -o dist --output-style compressed",
-    "sass": "node-sass --watch scss -o dist --output-style compressed"
+    "sass": "node-sass --watch scss -o dist --output-style compressed",
+    "prepublish": "yarn build"
   },
+  "files": [
+    "lib"
+  ],
   "dependencies": {
     "node-sass": "^7.0.1"
   }

@@ -53,17 +53,20 @@ To install dependencies for all projects, simply run:
 npx lerna bootstrap
 ```
 
-Build all dependencies by running:
-
-```
-npx lerna run build
-```
-
 You can then run Storybook by running:
 
 ```
 npx lerna run storybook
 ```
+
+Or you can run the React project inside the `@cd/ui-storybook` project:
+
+```
+npx run start
+```
+
+This is nothing more than a playground for you to add components from the component library
+and mess around with React. We will be spending most of our time in Storybook.
 
 This will open a tab in your default browser to Storybook. You will see a brief introduction about how to set up and learn Storybook. It’s recommended you check these out as Storybook can be configured in more ways than just listing props.
 

@@ -19,7 +19,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "build-github-pages": "build-storybook -s public -o ../../docs"
   },
   "eslintConfig": {
     "extends": [
@@ -58,8 +59,11 @@
     "@storybook/node-logger": "^6.4.14",
     "@storybook/preset-create-react-app": "^4.0.0",
     "@storybook/react": "^6.4.14",
+    "@types/jest": "^27.4.1",
     "@types/node": "^17.0.12",
-    "webpack": "^5.67.0",
-    "typescript": "^4.5.5"
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.13",
+    "typescript": "^4.5.5",
+    "webpack": "^5.67.0"
   }
 }

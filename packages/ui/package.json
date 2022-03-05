@@ -11,7 +11,8 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "rm -rf dist/ && tsc"
+    "build": "rm -rf dist/ && tsc",
+    "prepublish": "yarn build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",

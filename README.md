@@ -18,32 +18,11 @@ You will need to install Lerna globally to manage the project’s dependencies:
 npm install --global lerna
 ```
 
-You may need Admin permission to install a package globally
-For MacOs and Linux use:
-
-```
-sudo npm install --global lerna
-```
-
-Windows: You will need to be on an Administrator account and right click on the program you are using and click `Run as Administrator`
-
-
 We will use yarn as our package manager:
 
 ```
 npm install --global yarn 
 ```
-
-You may need Admin permission to install a package globally
-For MacOs and Linux use:
-
-```
-sudo npm install --global yarn
-```
-
-Windows: You will need to be on an Administrator account and right click on the program you are using and click `Run as Administrator`
-
-* Worth mentioning: now that you have yarn installed, instead of npm install you can use yarn add
 
 ### Clone the GitHub Repository
 

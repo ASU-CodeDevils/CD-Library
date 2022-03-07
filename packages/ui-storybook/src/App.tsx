@@ -1,51 +1,24 @@
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import "./App.scss";
+import { Layout } from "./components";
+import CodeStandards from "./pages/codeStandards";
+import Contributing from "./pages/contributing";
+import Home from "./pages/home";
+import Resources from "./pages/resources";
 
 function App() {
-  const links = [
-    {
-      href: "https://reactjs.org",
-      text: "Learn React"
-    },
-    {
-      href: "https://storybook.js.org/docs/react/get-started/introduction",
-      text: "StorybookJS for React"
-    },
-    {
-      href: "https://github.com/lerna/lerna",
-      text: "Lerna - A monorepo management tool"
-    },
-    {
-      href: "https://sass-lang.com/",
-      text: "The SASS Mark-up language (a CSS extension)"
-    }
-  ]
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>CodeDevils Component Library</h1>
-        <img src="//codedevils.org/static/img/logo-light.png" className="App-logo" alt="logo" />
-        <p>
-          This code is in <code>src/App.js</code>. Edit it, save it, and see how it shows up here!
-        </p>
-        <div className="App-links">
-          <ul>
-            {links.map((link, index) => (
-                <li key={`app-link-${index}`}>
-                  <a
-                    className="App-link"
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {link.text}
-                  </a>
-                </li>
-            ))}
-          </ul>
-        </div>
-      </header>
-    </div>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="contribute" element={<Contributing />} />
+          <Route path="code-standards" element={<CodeStandards />} />
+          <Route path="resources" element={<Resources />} />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 

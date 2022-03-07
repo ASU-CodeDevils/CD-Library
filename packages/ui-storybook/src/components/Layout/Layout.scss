@@ -1,0 +1,43 @@
+$nav-height: 70px;
+
+.app {
+  padding-bottom: 2em;
+
+  &--nav {
+    position: fixed;
+    top: 0;
+    height: $nav-height;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(30, 30, 30);
+
+    &.hide {
+      display: none;
+    }
+
+    &__logo {
+      position: fixed;
+      top: 0.5em;
+      left: 2em;
+      height: calc($nav-height - 1em);
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  &--content {
+    display: block;
+    margin-top: calc($nav-height + 1em);
+  }
+
+  // this ensures anchor tags will show up below the nav bar when navigated to
+  [id]::before {
+    content: "";
+    display: block;
+    height: calc($nav-height + 0.5em);
+    margin-top: calc($nav-height * -1 - 0.5em);
+    visibility: hidden;
+  }
+}

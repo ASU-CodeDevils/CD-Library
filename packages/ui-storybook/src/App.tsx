@@ -9,7 +9,7 @@ import Resources from "./pages/resources";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/CD-Library">
       <Layout>
         <Routes>
           <Route index element={<Home />} />

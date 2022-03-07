@@ -1,0 +1,47 @@
+a {
+  color: #61dafb;
+}
+
+body, html {
+  color: white;
+}
+
+.app {
+  background-color: rgb(37, 41, 51);
+  min-height: 100vh;
+  line-height: 2em;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  &-logo {
+    pointer-events: none;
+    max-width: 400px;
+    width: 90%;
+  }
+
+  &-header {
+    text-align: center;
+  }
+
+  &-links {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+$container-max-width: 1020px;
+
+.container {
+  max-width: $container-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2em;
+
+  @media only screen and (min-width: calc($container-max-width + 2em)) {
+    padding: 0;
+  }
+}

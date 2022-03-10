@@ -1,0 +1,6 @@
+# Ignore artifacts:
+build
+./**/*/build
+./**/*/dist
+docs
+coverage

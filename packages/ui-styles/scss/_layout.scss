@@ -1,11 +1,12 @@
 @import "./lib/colors";
 @import "./lib/fonts";
 
-body, html {
-    background-color: $color-background;
-    font: $font-paragraph;
+body,
+html {
+  background-color: $color-background;
+  font: $font-paragraph;
 
-    .inverted {
-        background-color: $color-background-inverted;
-    }
+  .inverted {
+    background-color: $color-background-inverted;
+  }
 }

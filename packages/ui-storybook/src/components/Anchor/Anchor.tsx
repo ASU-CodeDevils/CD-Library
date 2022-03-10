@@ -17,9 +17,8 @@ const Anchor = ({ as = "h2", anchor, text, children }: AnchorProps) => {
   }
 
   const Element = as;
-  const id = anchor === undefined && text !== undefined
-    ? slugifyText(text)
-    : anchor;
+  const id =
+    anchor === undefined && text !== undefined ? slugifyText(text) : anchor;
 
   return (
     <a href={`#${id}`} className="anchor">

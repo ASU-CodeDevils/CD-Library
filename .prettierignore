@@ -4,3 +4,6 @@ build
 ./**/*/dist
 docs
 coverage
+
+# ignore projects
+./packages/ui-styles/

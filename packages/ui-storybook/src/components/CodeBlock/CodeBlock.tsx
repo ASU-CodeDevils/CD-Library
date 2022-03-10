@@ -6,7 +6,7 @@ import CodeBlockProps from "./CodeBlock.props";
 /**
  * Formats a code block passed to the `CodeBlock` element to better handle
  * white space for smaller screen sizes.
- * 
+ *
  * @param code The code children to be processed.
  * @returns The formatted code string.
  */
@@ -20,7 +20,7 @@ const process = (code: React.ReactNode) => {
     lastLineIdx = i - numRemovedLines;
     indentation = Math.min(indentation, Math.max(0, line.search(/[^ \t]/)));
     return [line.trimEnd()];
-  }
+  };
 
   const lines = `${code}`
     .split("\n")
@@ -47,16 +47,15 @@ const process = (code: React.ReactNode) => {
     return "";
   }
 
-  return (indentation !== 0
-    ? lines.map(line => line.substring(indentation))
-    : lines
+  return (
+    indentation !== 0 ? lines.map((line) => line.substring(indentation)) : lines
   ).join("\n");
-}
+};
 
 /**
  * Renders a code block example on a page. Default language it renders is
  * Typescript.
- * 
+ *
  * @example ```
  *  <CodeBlock>
  *    {`

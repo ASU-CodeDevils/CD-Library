@@ -1,0 +1,9 @@
+dist
+./**/*/dist
+build
+./**/*/dist
+node_modules
+./**/*/node_modules
+
+# project-specific
+./packages/ui-styles/

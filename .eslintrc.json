@@ -7,8 +7,18 @@
             "jsx": true
         }
     },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
     "extends": [
         "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
         "prettier"
@@ -30,7 +40,8 @@
         "object-curly-spacing": ["error", "always"],
         "prefer-const": "error",
         "quotes": ["error", "double", {"avoidEscape": true}],
-        "max-len": ["error", {"code": 80, "ignoreUrls": true, "ignoreStrings": true}]
+        "max-len": ["error", {"code": 80, "ignoreUrls": true, "ignoreStrings": true}],
+        "react/react-in-jsx-scope": "error"
     },
     "env": {
         "node": true,

@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-const ui = require('..');
+// const ui = require("..");
 
-describe('ui', () => {
-    it('needs tests');
+describe("ui", () => {
+  it("needs tests");
 });

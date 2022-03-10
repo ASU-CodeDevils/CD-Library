@@ -71,3 +71,20 @@ and mess around with React. We will be spending most of our time in Storybook.
 This will open a tab in your default browser to Storybook. You will see a brief introduction about how to set up and learn Storybook. It’s recommended you check these out as Storybook can be configured in more ways than just listing props.
 
 Running the npx lerna run <script> command will run all packages with the <script> command specified in their package.json.
+
+### Linting
+
+Linting and formatting is set up as a combination of ESLint and Prettier.
+
+To run the linter:
+
+```
+yarn lint
+# or to make certain fixes for you
+yarn lint:fix
+```
+
+You have 2 options when running the Prettier.
+
+1. Run the command `yarn prettify`, which will run Prettier on all applicable files.
+2. Install the Prettier VSCode extension. The settings are set up so that Prettier will run each time you save a file.

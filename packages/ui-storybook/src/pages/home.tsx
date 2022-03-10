@@ -5,16 +5,16 @@ const Home = () => {
   const pages = [
     {
       to: "/contribute",
-      text: "Contribute"
+      text: "Contribute",
     },
     {
       to: "/code-standards",
-      text: "Code Standards"
+      text: "Code Standards",
     },
     {
       to: "/resources",
-      text: "Resources"
-    }
+      text: "Resources",
+    },
   ];
 
   return (
@@ -34,7 +34,9 @@ const Home = () => {
           <Anchor text="Pages" />
           <ul>
             {pages.map((page, index) => (
-              <li key={`page-${index}`}><Link to={page.to}>{page.text}</Link></li>
+              <li key={`page-${index}`}>
+                <Link to={page.to}>{page.text}</Link>
+              </li>
             ))}
           </ul>
           {/* <Anchor text="Resources" />

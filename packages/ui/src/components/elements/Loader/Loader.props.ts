@@ -1,7 +1,9 @@
-import { InputHTMLAttributes } from 'react';
+import { InputHTMLAttributes } from "react";
+import { BaseComponentWithoutAs } from "../../..";
 
-export interface LoaderProps extends InputHTMLAttributes<HTMLInputElement>{
-
+export interface ILoaderProps extends InputHTMLAttributes<HTMLInputElement> {
+  loading?: boolean;
 }
 
+type LoaderProps = BaseComponentWithoutAs<ILoaderProps>;
 export default LoaderProps;

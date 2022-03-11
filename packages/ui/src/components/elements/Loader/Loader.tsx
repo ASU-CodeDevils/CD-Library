@@ -1,7 +1,15 @@
-import React from 'react';
+import React from "react";
+import cx from "clsx";
 
-function Loader(){
-    return(<div>Loader</div>);
+import LoaderProps from "./Loader.props";
+import { UI_CLASSNAME } from "../../..";
+
+function Loader({ loading, className }: LoaderProps) {
+  return (
+    <div
+      className={cx(UI_CLASSNAME, "loader", { loading: loading }, className)}
+    ></div>
+  );
 }
 
 export default Loader;

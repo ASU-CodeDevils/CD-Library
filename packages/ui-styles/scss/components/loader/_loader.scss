@@ -5,7 +5,7 @@
     position: relative;
     width: 100px;
     height: 100px;
-    align-items: center;
+    text-align: center;
 
       .icon{
         margin: auto;
@@ -15,10 +15,6 @@
         width: 80%;
         height: 80%;
         animation: spin 2s linear infinite;
-      }
-      p{
-        position: relative;
-        left: 6px;
       }
   }
     

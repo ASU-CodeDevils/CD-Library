@@ -1,9 +1,8 @@
-import { OptionHTMLAttributes } from "react";
 import { BaseComponentWithoutAs } from "../../..";
 
-export interface ILoaderProps extends OptionHTMLAttributes<HTMLInputElement> {
-  /** The scheming for our loader */
-  value?: string;
+export interface ILoaderProps {
+  /** The loading text to be displayed */
+  text?: string;
 }
 
 type LoaderProps = BaseComponentWithoutAs<ILoaderProps>;

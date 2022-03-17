@@ -3,18 +3,45 @@
 @mixin loader{
   &.loader {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     text-align: center;
+    background-color: transparent;
 
       .icon{
         margin: auto;
-        border: 12px solid #f3f3f3;
-        border-top: 12px solid $color-bubbly-blue;
+        border: 3px solid #c7c7c7;
+        border-top: 3px solid $color-grey-1;
         border-radius: 50%;
         width: 80%;
         height: 80%;
-        animation: spin 2s linear infinite;
+        animation: spin .75s linear infinite;
+      }
+      p{
+        font-size: 14px;
+      }
+
+      &.disabled{
+        &.loader{
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+
+      &.inline{
+        &.loader{
+          display: inline-block;
+        }
+        p{
+          opacity: 0;
+        }
+      }
+
+      &.inverted{
+        .icon{
+          border: 3px solid $color-grey-1;
+          border-top: 3px solid #c7c7c7;
+        }
       }
   }
     

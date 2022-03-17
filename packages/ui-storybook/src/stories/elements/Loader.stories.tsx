@@ -14,4 +14,7 @@ export const Primary = Template.bind({});
 
 Primary.args = {
   text: "loading",
+  disabled: false,
+  inline: false,
+  inverted: false,
 };

@@ -2,10 +2,10 @@
 
 @mixin loader{
   &.loader {
-    position: relative;
+    display: inline-block;
+    position: absolute;
     background-color: transparent;
-    width: 80px;
-    height: 80px;
+    margin: 0px;
 
       .icon{
         border: 3px solid #c7c7c7;
@@ -20,6 +20,7 @@
         display: block;
         text-align: center;
         width: 100%;
+        height: 16px;
         padding-top: 4px;
       }
 
@@ -32,10 +33,12 @@
 
       &.inline{
         &.loader{
-          display: inline-block;
+          vertical-align: middle;
         }
         span{
           opacity: 0;
+          height: 0;
+          padding-top: 0px;
         }
       }
 

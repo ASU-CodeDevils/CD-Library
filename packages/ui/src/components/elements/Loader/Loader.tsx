@@ -6,7 +6,7 @@ import { UI_CLASSNAME } from "../../..";
 
 function Loader({
   className,
-  text,
+  text = "loading",
   disabled,
   inline,
   inverted,

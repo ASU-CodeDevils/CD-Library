@@ -12,6 +12,9 @@ export interface ILoaderProps {
 
   /** Whether the colors are inverted */
   inverted?: boolean;
+
+  /** The size of the loader, small, medium, large */
+  size?: "small" | "medium" | "large";
 }
 
 type LoaderProps = BaseComponentWithoutAs<ILoaderProps>;

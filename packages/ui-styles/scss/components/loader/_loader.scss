@@ -3,22 +3,24 @@
 @mixin loader{
   &.loader {
     position: relative;
-    width: 60px;
-    height: 60px;
-    text-align: center;
     background-color: transparent;
+    width: 80px;
+    height: 80px;
 
       .icon{
-        margin: auto;
         border: 3px solid #c7c7c7;
         border-top: 3px solid $color-grey-1;
+        margin: auto;
         border-radius: 50%;
-        width: 80%;
-        height: 80%;
-        animation: spin .75s linear infinite;
+        width: 100%;
+        height: 100%;
+        animation: spin 1s linear infinite;
       }
-      p{
-        font-size: 14px;
+      span{
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding-top: 4px;
       }
 
       &.disabled{
@@ -32,7 +34,7 @@
         &.loader{
           display: inline-block;
         }
-        p{
+        span{
           opacity: 0;
         }
       }
@@ -41,6 +43,34 @@
         .icon{
           border: 3px solid $color-grey-1;
           border-top: 3px solid #c7c7c7;
+        }
+      }
+
+      &.small{
+        .icon{
+          width: 25px;
+          height: 25px;
+        }
+        span{
+          font-size: 12px;
+        }
+      }
+      &.medium{
+        .icon{
+          width: 50px;
+          height: 50px;
+        }
+        span{
+          font-size: 16px;
+        }
+      }
+      &.large{
+        .icon{
+          width: 80px;
+          height: 80px;
+        }
+        span{
+          font-size: 20px;
         }
       }
   }

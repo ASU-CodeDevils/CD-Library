@@ -6,6 +6,12 @@ import "@cd/ui-styles/dist/cdui.css";
 export default {
   title: "Elements/Loader",
   component: Loader,
+  argTypes: {
+    size: {
+      control: { type: "select" },
+      options: ["small", "medium", "large"],
+    },
+  },
 } as ComponentMeta<typeof Loader>;
 
 const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />;
@@ -17,4 +23,5 @@ Primary.args = {
   disabled: false,
   inline: false,
   inverted: false,
+  size: "large",
 };

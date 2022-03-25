@@ -2,8 +2,8 @@
 
 @mixin loader{
   &.loader {
-    display: inline-block;
     position: absolute;
+    display: inline-block;
     background-color: transparent;
     margin: 0px;
 
@@ -14,19 +14,19 @@
         border-radius: 50%;
         width: 100%;
         height: 100%;
+        -webkit-animation: spin 1s linear infinite;
         animation: spin 1s linear infinite;
       }
       span{
         display: block;
         text-align: center;
         width: 100%;
-        height: 16px;
         padding-top: 4px;
       }
 
       &.disabled{
         &.loader{
-          opacity: 0;
+          visibility: hidden;
           pointer-events: none;
         }
       }
@@ -55,31 +55,38 @@
           height: 25px;
         }
         span{
-          font-size: 12px;
+          font-size: 0.85rem;
         }
       }
+
       &.medium{
         .icon{
           width: 50px;
           height: 50px;
         }
         span{
-          font-size: 16px;
+          font-size: 1rem;
         }
       }
+
       &.large{
         .icon{
           width: 80px;
           height: 80px;
         }
         span{
-          font-size: 20px;
+          font-size: 1.1rem;
         }
       }
   }
     
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+  @-webkit-keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}

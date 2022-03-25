@@ -23,5 +23,5 @@ Primary.args = {
   disabled: false,
   inline: false,
   inverted: false,
-  size: "large",
+  size: "medium",
 };

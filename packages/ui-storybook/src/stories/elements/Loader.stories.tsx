@@ -19,7 +19,7 @@ const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />;
 export const Primary = Template.bind({});
 
 Primary.args = {
-  text: "loading",
+  text: "Loading",
   disabled: false,
   inline: false,
   inverted: false,

@@ -44,7 +44,7 @@
 
       &.inverted{
         .icon{
-          border: 3px solid #c7c7c7;
+          border: 3px solid $color-shady-grey;
           border-top: 3px solid $color-white;
         }
         span{

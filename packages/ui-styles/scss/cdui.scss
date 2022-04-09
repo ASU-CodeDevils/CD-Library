@@ -1,8 +1,10 @@
 @import "./layout";
 @import "./components/input/input";
+@import "./components/loader/loader";
 
 .cdui {
   @include input;
+  @include loader;
 
   @keyframes spin {
     from {

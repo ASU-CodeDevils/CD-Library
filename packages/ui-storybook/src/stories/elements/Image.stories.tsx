@@ -2,8 +2,8 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Image } from "@cd/ui";
 import "@cd/ui-styles/dist/cdui.css";
 
- import imageFile from "../assets/sundevil.png";
-//const imageFile = "../assets/sundevil.png";
+// import imageFile from "../assets/sundevil.png";
+const imageFile = require("../assets/sundevil.png");
 
 //👇 This default export determines where your story goes in the story list
 export default {
@@ -20,9 +20,9 @@ export default {
     },
     spaced: {
       control: { type: "select" },
-      options: [false, "left", "right"],
+      options: [true, "left", "right"],
     },
-    verticalAlign: {
+    verticallyAligned: {
       control: { type: "select" },
       options: ["bottom", "middle", "top"],
     },
@@ -35,10 +35,16 @@ const Template: ComponentStory<typeof Image> = (args) => <Image {...args} />;
 export const Primary = Template.bind({});
 
 Primary.args = {
+  disabled: false,
+  bordered: false,
+  fluid: false,
+  rounded: false,
+  circular: false,
+  verticallyAligned: "middle",
+  centered: false,
+  spaced: true,
+  size: "small",
   src: imageFile,
   alt: "image",
-  size: "small",
-  spaced: false,
-  verticalAlign: "middle",
   hidden: false,
 };

@@ -1,0 +1,137 @@
+@import "../../lib/colors";
+@import "../../lib/mixins";
+@import "../../lib/variables";
+
+@mixin image {
+  &.image {
+    position: relative;
+    display: inline;
+    text-align: left;
+
+    // &.avatar {
+    //   img {
+    //     width: ;
+    //     border-radius: 50%;
+    //   }
+    // }
+
+    &.bordered {
+      img {
+        border: 1px solid $color-new-navy;
+      }
+    }
+
+    &.fluid {
+      &, img {
+        width: 100%;
+      }
+    }
+
+    &.rounded {
+      img {
+        border-radius: 5px;
+      }
+    }
+
+    &.circular {
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    &.disabled {
+      img {
+        outline-width: 1px;
+        background-color: lighten($color-new-navy, 50%);
+        opacity: 0.7;
+
+        &:hover,
+        &:focus {
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    &.bottom {
+      vertical-align: bottom;
+    }
+
+    &.middle {
+      vertical-align: middle;
+    }
+
+    &.top {
+      vertical-align: top;
+    }
+
+    &.centered {
+      text-align: center;
+    }
+
+    &.spaced {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    &.left {
+      margin-left: 5px;
+    }
+
+    &.right {
+      margin-right: 5px;
+    }
+
+    // &.floated {
+
+    // }
+
+    &.mini {
+      img {
+        width: 35px;
+      }
+    }
+
+    &.tiny {
+      img {
+        width: 80px;
+      }
+    }
+
+    &.small {
+      img {
+        width: 150px;
+      }
+    }
+
+    &.medium {
+      img {
+        width: 300px;
+      }
+    }
+
+    &.large {
+      img {
+        width: 450px;
+      }
+    }
+
+    &.big {
+      img {
+        width: 600px
+      };
+    }
+
+    &.huge {
+      img {
+        width: 800px;
+      }
+    }
+
+    &.massive {
+      img {
+        width: 960px;
+      }
+    }
+
+  }
+}

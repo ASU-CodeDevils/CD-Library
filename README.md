@@ -53,6 +53,12 @@ To install dependencies for all projects, simply run:
 npx lerna bootstrap
 ```
 
+To build all packages, just run:
+
+```
+npx lerna build
+```
+
 You can then run Storybook by running:
 
 ```

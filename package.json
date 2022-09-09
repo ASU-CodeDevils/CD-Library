@@ -17,5 +17,8 @@
     "lint": "yarn eslint packages/ --resolve-plugins-relative-to .",
     "lint:fix": "yarn lint --fix",
     "prettify": "yarn prettier --write packages/"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2"
   }
 }

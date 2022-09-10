@@ -56,7 +56,7 @@ npx lerna bootstrap
 To build all packages, just run:
 
 ```
-npx lerna build
+npx lerna run build
 ```
 
 You can then run Storybook by running:

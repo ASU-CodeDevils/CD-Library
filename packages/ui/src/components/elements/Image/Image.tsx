@@ -18,6 +18,7 @@ function Image({
   src,
   alt = "image",
   hidden,
+  href,
   ...imageHTMLProps
 }: ImageProps) {
   return (
@@ -39,12 +40,14 @@ function Image({
         className
       )}
     >
-      <img
-        src={src}
-        alt={alt}
-        hidden={hidden}
-        {...imageHTMLProps}
-      />
+      <a href={href} >
+        <img
+          src={src}
+          alt={alt}
+          hidden={hidden}
+          {...imageHTMLProps}
+        />
+      </a>
     </div>
   );
 }

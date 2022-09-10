@@ -5,6 +5,9 @@ import "@cd/ui-styles/dist/cdui.css";
 // import imageFile from "../assets/sundevil.png";
 const imageFile = require("../assets/sundevil.png");
 
+// default link of the image
+const imageLink = "https://www.google.com";
+
 //👇 This default export determines where your story goes in the story list
 export default {
   /* 👇 The title prop is optional.
@@ -47,4 +50,5 @@ Primary.args = {
   src: imageFile,
   alt: "image",
   hidden: false,
+  href: imageLink,
 };

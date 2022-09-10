@@ -35,6 +35,8 @@ export interface IImageProps extends ImgHTMLAttributes<HTMLImageElement> {
   alt?: string;
   /** The image can be hidden */
   hidden?: boolean;
+  /** The image can be formatted to link to other content */
+  href?: string;
 }
 
 type ImageProps = BaseComponentWithoutAs<IImageProps>;

@@ -7,6 +7,7 @@ import { UI_CLASSNAME } from "../../..";
 function Image({
   className,
   disabled,
+  avatar,
   bordered,
   fluid,
   rounded,
@@ -14,6 +15,7 @@ function Image({
   verticallyAligned,
   centered,
   spaced,
+  floated,
   size,
   src,
   alt = "image",
@@ -28,6 +30,7 @@ function Image({
         "image",
         {
           disabled: disabled,
+          avatar: avatar,
           bordered: bordered,
           fluid: fluid,
           rounded: rounded,
@@ -35,6 +38,7 @@ function Image({
           verticallyAligned: verticallyAligned,
           centered: centered,
           spaced: spaced,
+          floated: floated,
         },
         size,
         className

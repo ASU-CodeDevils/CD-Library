@@ -39,13 +39,15 @@ export const Primary = Template.bind({});
 
 Primary.args = {
   disabled: false,
+  avatar: false,
   bordered: false,
   fluid: false,
   rounded: false,
   circular: false,
-  verticallyAligned: "middle",
+  verticallyAligned: "middle aligned",
   centered: false,
   spaced: true,
+  floated: false,
   size: "small",
   src: imageFile,
   alt: "image",

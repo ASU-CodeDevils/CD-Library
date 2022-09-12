@@ -5,15 +5,15 @@
 @mixin image {
   &.image {
     position: relative;
-    display: inline;
+    display: inline-block;
     text-align: left;
 
-    // &.avatar {
-    //   img {
-    //     width: ;
-    //     border-radius: 50%;
-    //   }
-    // }
+    &.avatar {
+      vertical-align: middle;
+      img{
+        border-radius: 50%;
+      }
+    }
 
     &.bordered {
       img {
@@ -52,20 +52,22 @@
       }
     }
 
-    &.bottom {
+    &.bottom.aligned {
       vertical-align: bottom;
     }
 
-    &.middle {
+    &.middle.aligned {
       vertical-align: middle;
     }
 
-    &.top {
+    &.top.aligned {
       vertical-align: top;
     }
 
     &.centered {
-      text-align: center;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     &.spaced {
@@ -73,17 +75,25 @@
       margin-right: 5px;
     }
 
-    &.left {
+    &.left.spaced {
       margin-left: 5px;
     }
 
-    &.right {
+    &.right.spaced {
       margin-right: 5px;
     }
 
-    // &.floated {
+    &.left.floated {
+      img {
+        float: left;
+      }
+    }
 
-    // }
+    &.right.floated {
+      img {
+        float: right;
+      }
+    }
 
     &.mini {
       img {

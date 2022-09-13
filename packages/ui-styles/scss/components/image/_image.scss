@@ -5,12 +5,17 @@
 @mixin image {
   &.image {
     position: relative;
-    display: inline-block;
-    text-align: left;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
 
     &.avatar {
+      display: inline-block;
       vertical-align: middle;
-      img{
+      margin-left: 5px;
+      margin-right: 5px;
+      img {
+        height: 100%;
         border-radius: 50%;
       }
     }
@@ -22,7 +27,8 @@
     }
 
     &.fluid {
-      &, img {
+      display: block;
+      &,img {
         width: 100%;
       }
     }
@@ -53,26 +59,23 @@
     }
 
     &.bottom.aligned {
+      display: inline-block;
       vertical-align: bottom;
     }
 
     &.middle.aligned {
+      display: inline-block;
       vertical-align: middle;
     }
 
     &.top.aligned {
+      display: inline-block;
       vertical-align: top;
     }
 
     &.centered {
       display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    &.spaced {
-      margin-left: 5px;
-      margin-right: 5px;
+      text-align: center;
     }
 
     &.left.spaced {
@@ -83,16 +86,19 @@
       margin-right: 5px;
     }
 
-    &.left.floated {
-      img {
-        float: left;
+    &:not(.left.spaced):not(.right.spaced) {
+      &.spaced {
+        margin-left: 5px;
+        margin-right: 5px;
       }
     }
 
+    &.left.floated {
+      float: left;
+    }
+
     &.right.floated {
-      img {
-        float: right;
-      }
+      float: right;
     }
 
     &.mini {

@@ -17,17 +17,21 @@ export default {
   title: "Elements/Image",
   component: Image,
   argTypes: {
-    size: {
+    aligned: {
       control: { type: "select" },
-      options: ["mini", "tiny", "small", "medium", "large", "big", "huge", "massive"],
+      options: ["bottom aligend", "middle aligned", "top aligned"],
     },
     spaced: {
       control: { type: "select" },
-      options: [true, "left", "right"],
+      options: ["spaced", "left spaced", "right spaced"],
     },
-    verticallyAligned: {
+    floated: {
       control: { type: "select" },
-      options: ["bottom", "middle", "top"],
+      options: ["left floated", "right floated"],
+    },
+    size: {
+      control: { type: "select" },
+      options: ["mini", "tiny", "small", "medium", "large", "big", "huge", "massive"],
     },
   },
 } as ComponentMeta<typeof Image>;
@@ -44,10 +48,10 @@ Primary.args = {
   fluid: false,
   rounded: false,
   circular: false,
-  verticallyAligned: "middle aligned",
+  aligned: "",
   centered: false,
-  spaced: true,
-  floated: false,
+  spaced: "",
+  floated: "",
   size: "small",
   src: imageFile,
   alt: "image",

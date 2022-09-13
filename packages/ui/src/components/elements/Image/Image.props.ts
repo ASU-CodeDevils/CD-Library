@@ -15,12 +15,12 @@ export interface IImageProps extends ImgHTMLAttributes<HTMLImageElement> {
   /** The image may appear circular */
   circular?: boolean;
   /** The image can specify its vertical alignment */
-  verticallyAligned?: "bottom aligned" | "middle aligned" | "top aligned";
+  aligned?: "bottom aligend" | "middle aligned" | "top aligned";
   /** The image can appear centered in a content block */
   centered?: boolean;
   /** The image can specify that it needs an additional spacing
    * to separate it from nearby content. */
-  spaced?: boolean | "right spaced" | "left spaced";
+  spaced?: boolean | "left spaced" | "right spaced";
   /** The image can sit to the left or right of other content */
   floated?: "left floated" | "right floated";
   /** The size of the image */

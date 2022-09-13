@@ -12,7 +12,7 @@ function Image({
   fluid,
   rounded,
   circular,
-  verticallyAligned,
+  aligned,
   centered,
   spaced,
   floated,
@@ -35,11 +35,11 @@ function Image({
           fluid: fluid,
           rounded: rounded,
           circular: circular,
-          verticallyAligned: verticallyAligned,
           centered: centered,
-          spaced: spaced,
-          floated: floated,
         },
+        aligned,
+        spaced,
+        floated,
         size,
         className
       )}

@@ -22,7 +22,7 @@ function Button({
         className)
       }
     >
-      <span>{label}</span>
+      <button>{label}</button>
     </div>
   );
 }

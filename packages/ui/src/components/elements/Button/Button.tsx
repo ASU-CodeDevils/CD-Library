@@ -15,12 +15,13 @@ function Button({
   //TODO: Add your code here
   return (
     <div
-      className={
-        (cx(UI_CLASSNAME, "button"),
+      className={cx(
+        UI_CLASSNAME,
+        "button",
         { inverted: inverted, disabled: disabled, onHover: onHover },
         variant,
-        className)
-      }
+        className
+      )}
     >
       <button>{label}</button>
     </div>

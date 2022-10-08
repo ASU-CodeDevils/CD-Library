@@ -5,3 +5,9 @@
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
 }
+
+@mixin button-border-radius($radius: $button-border-radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}

@@ -1,0 +1,25 @@
+@import "../../lib/colors";
+@import "../../lib/fonts";
+@import "../../lib/mixins";
+@import "../../lib/variables";
+
+@mixin button {
+  &.button {
+    position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+
+    &,
+    button {
+      @include button-border-radius;
+      background-color: $color-asu-maroon;
+      border: none;
+      color: $color-white;
+      cursor: pointer;
+      display: inline-block;
+      font: $font-button;
+      margin: 10px 20px;
+    }
+  }
+}

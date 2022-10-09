@@ -10,9 +10,13 @@
     display: -ms-inline-flexbox;
     display: inline-flex;
     display: inline-block;
-    @include button-border-radius;
+    @include border-radius($button-border-radius);
     cursor: pointer;
     font: $font-button;
+
+    &:hover {
+      transition: all 0.3s ease-out;
+    }
 
     &.primary {
       background-color: $color-asu-maroon;

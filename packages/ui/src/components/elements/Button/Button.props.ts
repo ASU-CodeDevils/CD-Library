@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes } from "react";
 import { BaseComponentWithoutAs } from "../../..";
 
-export interface BButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /** Whether the button is primary or secondary */
   variant?: "primary" | "secondary";
   /** Whether the button is inverted */
@@ -12,5 +12,5 @@ export interface BButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   label?: string;
 }
 
-type ButtonProps = BaseComponentWithoutAs<BButtonProps>;
+type ButtonProps = BaseComponentWithoutAs<IButtonProps>;
 export default ButtonProps;

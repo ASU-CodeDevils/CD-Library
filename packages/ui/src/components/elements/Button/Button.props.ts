@@ -8,8 +8,6 @@ export interface BButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   inverted?: boolean;
   /** Whether the button is disabled */
   disabled?: boolean;
-  /** Color shifts whenever user hovers over component */
-  onHover?: boolean;
   /** Text on button */
   label?: string;
 }

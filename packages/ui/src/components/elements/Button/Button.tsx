@@ -9,21 +9,22 @@ function Button({
   variant,
   inverted,
   disabled,
-  onHover,
   label,
 }: ButtonProps) {
   //TODO: Add your code here
   return (
-    <div
-      className={cx(
-        UI_CLASSNAME,
-        "button",
-        { inverted: inverted, disabled: disabled, onHover: onHover },
-        variant,
-        className
-      )}
-    >
-      <button>{label}</button>
+    <div>
+      <button
+        className={cx(
+          UI_CLASSNAME,
+          "btn",
+          { inverted: inverted, disabled: disabled },
+          variant,
+          className
+        )}
+      >
+        {label}
+      </button>
     </div>
   );
 }

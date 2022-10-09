@@ -4,22 +4,85 @@
 @import "../../lib/variables";
 
 @mixin button {
-  &.button {
+  &.btn {
     position: relative;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    display: inline-block;
+    @include button-border-radius;
+    cursor: pointer;
+    font: $font-button;
 
-    &,
-    button {
-      @include button-border-radius;
+    &.primary {
       background-color: $color-asu-maroon;
-      border: none;
       color: $color-white;
-      cursor: pointer;
-      display: inline-block;
-      font: $font-button;
-      margin: 10px 20px;
+      border: none;
+      padding: 10px 20px;
+
+      &:hover {
+        background-color: $color-better-black;
+      }
+
+      &.disabled {
+        background-color: $color-darker-grey;
+        color: $color-light-grey;
+        cursor: not-allowed;
+      }
+
+      &.inverted {
+        background-color: $color-white;
+        color: $color-better-black;
+
+        &:hover {
+          background-color: $color-light-grey;
+        }
+
+        &.disabled {
+          background-color: $color-light-grey;
+          color: $color-darker-grey;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    &.secondary {
+      background-color: transparent;
+      color: $color-asu-maroon;
+      border-style: solid;
+      border-width: 2px;
+      border-color: $color-asu-maroon;
+      padding: 8px 18px;
+
+      &:hover {
+        background-color: $color-asu-maroon;
+        color: $color-white;
+      }
+
+      &.disabled {
+        background-color: transparent;
+        color: #8c1d4080;
+        border-color: #8c1d4080;
+        cursor: not-allowed;
+      }
+
+      &.inverted {
+        background-color: transparent;
+        color: $color-white;
+        border-color: $color-white;
+
+        &:hover {
+          background-color: $color-white;
+          color: $color-better-black;
+        }
+
+        &.disabled {
+          background-color: transparent;
+          color: #FFFFFF80;
+          border-color: #FFFFFF80;
+          cursor: not-allowed;
+        }
+      }
     }
   }
 }

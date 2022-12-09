@@ -16,6 +16,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      - run: npm init --scope=@codedevils
+      - run: npm ic
       - run: npm ci
       - run: npm test
 

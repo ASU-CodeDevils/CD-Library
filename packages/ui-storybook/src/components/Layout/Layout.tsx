@@ -13,7 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
       <div className={`app--nav${isHomePage ? ` hide` : ""}`}>
         <div className="app--nav__logo">
           <img
-            src="//codedevils.org/static/img/logo-light.png"
+            src="https://codedevils.org/_next/image?url=%2Flogo-light.png&w=384&q=75"
             alt="CodeDevils logo"
           />
         </div>

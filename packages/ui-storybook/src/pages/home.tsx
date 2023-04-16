@@ -22,7 +22,7 @@ const Home = () => {
       <header className="app-header">
         <h1>CodeDevils Component Library</h1>
         <img
-          src="//codedevils.org/static/img/logo-light.png"
+          src="https://codedevils.org/_next/image?url=%2Flogo-light.png&w=384&q=75"
           className="app-logo"
           alt="logo"
         />

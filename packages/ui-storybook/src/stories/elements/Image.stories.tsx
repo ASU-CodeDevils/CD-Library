@@ -31,7 +31,16 @@ export default {
     },
     size: {
       control: { type: "select" },
-      options: ["mini", "tiny", "small", "medium", "large", "big", "huge", "massive"],
+      options: [
+        "mini",
+        "tiny",
+        "small",
+        "medium",
+        "large",
+        "big",
+        "huge",
+        "massive",
+      ],
     },
   },
 } as ComponentMeta<typeof Image>;

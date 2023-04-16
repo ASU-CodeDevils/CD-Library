@@ -15,7 +15,7 @@
     "build": "sass scss dist --style compressed",
     "sass": "sass --watch scss dist --style compressed",
     "sass-help": "sass --help",
-    "prepublish": "yarn build"
+    "prepublish": "pnpm build"
   },
   "files": [
     "lib"

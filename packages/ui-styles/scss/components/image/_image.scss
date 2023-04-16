@@ -28,7 +28,8 @@
 
     &.fluid {
       display: block;
-      &,img {
+      &,
+      img {
         width: 100%;
       }
     }
@@ -133,8 +134,8 @@
 
     &.big {
       img {
-        width: 600px
-      };
+        width: 600px;
+      }
     }
 
     &.huge {
@@ -148,6 +149,5 @@
         width: 960px;
       }
     }
-
   }
 }

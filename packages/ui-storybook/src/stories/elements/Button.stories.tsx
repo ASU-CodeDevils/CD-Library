@@ -11,11 +11,11 @@ export default {
       options: ["primary", "secondary"],
     },
     disabled: {
-        control: { type: "boolean" },
+      control: { type: "boolean" },
     },
     inverted: {
-        control: { type: "boolean" },
-    }
+      control: { type: "boolean" },
+    },
   },
 } as ComponentMeta<typeof Button>;
 

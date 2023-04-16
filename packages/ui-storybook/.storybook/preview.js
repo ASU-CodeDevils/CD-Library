@@ -9,14 +9,14 @@ export const parameters = {
   backgrounds: {
     default: "light",
     values: [
-        {
+      {
         name: "light",
         value: "#f5f5f5",
-        },
-        {
+      },
+      {
         name: "inverted",
         value: "#8c1d40",
-        },
-    ]
-    }
+      },
+    ],
+  },
 };

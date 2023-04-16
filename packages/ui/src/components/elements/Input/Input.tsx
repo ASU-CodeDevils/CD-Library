@@ -53,11 +53,13 @@ function Input({
         },
         className
       )}
+      {...inputHTMLProps}
     >
       <input tabIndex={computeTabIndex()} {...inputHTMLProps}>
         {children}
       </input>
-      {getIcon()}
+      {/* BUG: error TS2746: This JSX tag's 'children' prop expects a single child of type 'ReactNode', but multiple children were provided. */}
+      {/* {getIcon()} */}
     </div>
   );
 }

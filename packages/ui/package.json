@@ -12,18 +12,18 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "build": "rimraf dist/ && tsc",
-    "prepublish": "yarn build"
+    "prepublish": "pnpm build"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/react-fontawesome": "^0.1.17",
-    "clsx": "^1.1.1",
-    "react": "^17.0.2",
-    "rimraf": "^3.0.2"
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "clsx": "^1.2.1",
+    "react": "^18.2.0",
+    "rimraf": "^5.0.0"
   },
   "devDependencies": {
-    "@types/node": "^17.0.12",
-    "@types/react": "^17.0.38"
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.35"
   }
 }

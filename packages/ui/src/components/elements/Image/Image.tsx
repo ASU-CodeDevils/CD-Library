@@ -44,13 +44,8 @@ function Image({
         className
       )}
     >
-      <a href={href} >
-        <img
-          src={src}
-          alt={alt}
-          hidden={hidden}
-          {...imageHTMLProps}
-        />
+      <a href={href}>
+        <img src={src} alt={alt} hidden={hidden} {...imageHTMLProps} />
       </a>
     </div>
   );

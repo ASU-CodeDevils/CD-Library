@@ -1,4 +1,4 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 
 import { Alert } from "@cd/ui";
 import "@cd/ui-styles/dist/cdui.css";
@@ -16,9 +16,9 @@ export default {
       options: ["outlined", "filled"],
     },
   },
-} as ComponentMeta<typeof Alert>;
+} as Meta<typeof Alert>;
 
-const Template: ComponentStory<typeof Alert> = (args) => (
+const Template: StoryFn<typeof Alert> = (args) => (
   <Alert {...args}>This is an example alert</Alert>
 );
 

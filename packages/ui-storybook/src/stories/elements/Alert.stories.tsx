@@ -14,8 +14,8 @@ export default {
     variant: {
       control: { type: "select" },
       options: ["outlined", "filled"],
-    }
-  }
+    },
+  },
 } as ComponentMeta<typeof Alert>;
 
 const Template: ComponentStory<typeof Alert> = (args) => (

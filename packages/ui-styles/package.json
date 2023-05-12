@@ -1,9 +1,9 @@
 {
-  "name": "@cd/ui-styles",
-  "version": "1.0.0",
+  "name": "@codedevils/ui-styles",
+  "version": "0.1.0",
   "description": "Styling for the CodeDevils React component library",
   "author": "Kevin Shelley <kevin.shelley@pm.me>",
-  "homepage": "",
+  "homepage": "https://codedevils.org/",
   "license": "ISC",
   "main": "dist/index.js",
   "directories": {
@@ -12,14 +12,15 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "node-sass scss -o dist --output-style compressed",
-    "sass": "node-sass --watch scss -o dist --output-style compressed",
-    "prepublish": "yarn build"
+    "build": "sass scss dist --style compressed",
+    "sass": "sass --watch scss dist --style compressed",
+    "sass-help": "sass --help",
+    "prepublish": "pnpm build"
   },
   "files": [
     "lib"
   ],
   "dependencies": {
-    "node-sass": "^7.0.1"
+    "sass": "^1.62.0"
   }
 }

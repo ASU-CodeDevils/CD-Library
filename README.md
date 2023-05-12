@@ -12,62 +12,57 @@ As of now, all projects are built off each other.
 
 ### Install Dependencies
 
-You will need to install Lerna globally to manage the project’s dependencies:
+You will need to install the `pnpm` package manager to manage the projects dependencies.
 
-```
-npm install --global lerna
-```
-
-We will use yarn as our package manager:
-
-```
-npm install --global yarn 
-```
+- Refer to the [pnpm documentation](https://pnpm.io/installation) for installation instructions.
 
 ### Clone the GitHub Repository
 
 Clone the repository:
 
-```
-// with SSH
+```shell
+# with SSH
 git clone git@github.com:ASU-CodeDevils/CD-Library.git
 
-// with HTTPS
+# with HTTPS
 git clone https://github.com/ASU-CodeDevils/CD-Library.git
 
-// with GitHub CLI
+# with GitHub CLI
 gh repo clone ASU-CodeDevils/CD-Library
 ```
 
 Then change to the project’s root directory
 
-```
+```shell
 cd CD-Library
 ```
 
-### Configure Lerna
+### Configure CD-Library Workspace
 
 To install dependencies for all projects, simply run:
 
-```
-npx lerna bootstrap
+```shell
+pnpm install
+# or
+pnpm i
 ```
 
 To build all packages, just run:
 
-```
+```shell
 npx lerna run build
 ```
 
 You can then run Storybook by running:
 
-```
+```shell
 npx lerna run storybook
 ```
 
-Or you can run the React project inside the `@cd/ui-storybook` project:
+Want to run the contributing guide? Run:
 
-```
+
+```shell
 npx lerna run start
 ```
 
@@ -76,7 +71,7 @@ and mess around with React. We will be spending most of our time in Storybook.
 
 This will open a tab in your default browser to Storybook. You will see a brief introduction about how to set up and learn Storybook. It’s recommended you check these out as Storybook can be configured in more ways than just listing props.
 
-Running the npx lerna run <script> command will run all packages with the <script> command specified in their package.json.
+Running the `npx lerna run` command will run all packages with the command specified in their package.json.
 
 ### Linting
 
@@ -84,13 +79,13 @@ Linting and formatting is set up as a combination of ESLint and Prettier.
 
 To run the linter:
 
-```
-yarn lint
+```shell
+pnpm lint
 # or to make certain fixes for you
-yarn lint:fix
+pnpm lint:fix
 ```
 
 You have 2 options when running the Prettier.
 
-1. Run the command `yarn prettify`, which will run Prettier on all applicable files.
+1. Run the command `pnpm prettify`, which will run Prettier on all applicable files.
 2. Install the Prettier VSCode extension. The settings are set up so that Prettier will run each time you save a file.

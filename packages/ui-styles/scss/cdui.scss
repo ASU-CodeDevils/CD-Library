@@ -1,10 +1,14 @@
 @import "./layout";
 @import "./components/input/input";
 @import "./components/loader/loader";
+@import "./components/image/image";
+@import "./components/button/button";
 
 .cdui {
   @include input;
   @include loader;
+  @include image;
+  @include button;
 
   @keyframes spin {
     from {

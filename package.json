@@ -1,22 +1,39 @@
 {
   "name": "root",
-  "private": true,
+  "private": false,
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.14.0",
-    "@typescript-eslint/parser": "^5.14.0",
-    "eslint": "^8.10.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.29.3",
-    "lerna": "^4.0.0",
-    "prettier": "^2.5.1",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "lerna": "^6.6.1",
+    "prettier": "^2.8.7",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^4.6.2"
+    "typescript": "^4.9.5"
   },
   "scripts": {
-    "lint": "yarn eslint packages/ --resolve-plugins-relative-to .",
-    "lint:fix": "yarn lint --fix",
-    "prettify": "yarn prettier --write packages/"
+    "preinstall": "npx only-allow pnpm",
+    "lint": "pnpm eslint packages/ --resolve-plugins-relative-to .",
+    "lint:fix": "pnpm lint --fix",
+    "prettify": "pnpm prettier --write packages/"
   },
-  "dependencies": {}
+  "pnpm": {
+    "allowedDeprecatedVersions": {
+      "@npmcli/move-file": "*",
+      "stable": "*",
+      "svgo": "*",
+      "source-map-resolve": "*",
+      "rollup-plugin-terser": "*",
+      "querystring": "*",
+      "chokidar": "*",
+      "sourcemap-codec": "*",
+      "fsevents": "*",
+      "source-map-url": "*",
+      "resolve-url": "*",
+      "urix": "*",
+      "w3c-hr-time": "*"
+    }
+  }
 }

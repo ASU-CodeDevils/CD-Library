@@ -23,4 +23,7 @@ Primary.args = {
   loading: false,
   placeholder: "Input...",
   disabled: false,
+  error: false,
+  icon: "search",
+  tabIndex: 0, 
 };

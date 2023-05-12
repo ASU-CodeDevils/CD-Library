@@ -34,16 +34,17 @@ function Input({
   // BUG: error TS2746: This JSX tag's 'children' prop expects a single child
   // of type 'ReactNode', but multiple children were provided.
 
-  // restricting to have getIcon return only a single type. This resolves initial error of multiple components. 
+  // restricting to have getIcon return only a single type
+  // This resolves initial error of multiple components
   const getIcon = () => {
     if (isIconName(icon)) {
       return <Icon name={icon} />;
     }
-    
+
     if (isIconProps(icon)) {
       return <Icon {...icon} />;
     }
-    
+
     return null;
   };
 
@@ -65,8 +66,8 @@ function Input({
       {children}
       {getIcon()}
     </div>
-  // Input tag does not supports closing tag. 
-  // Input is a void element and cannot have any children. 
+    // Input tag does not supports closing tag.
+    // Input is a void element and cannot have any children.
   );
 }
 

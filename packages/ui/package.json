@@ -1,9 +1,9 @@
 {
   "name": "@cd/ui",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "CodeDevils React component library",
   "author": "CodeDevils <webmaster@codedevils.org>",
-  "homepage": "",
+  "homepage": "https://codedevils.org/",
   "license": "ISC",
   "main": "dist/index.js",
   "directories": {

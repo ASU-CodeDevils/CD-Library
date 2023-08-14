@@ -3,6 +3,7 @@ import cx from "clsx";
 
 import ButtonProps from "./Button.props";
 import { UI_CLASSNAME } from "../../..";
+import { Loader } from "../Loader"; // Loading loader
 
 const Button = ({
   className,
@@ -10,6 +11,7 @@ const Button = ({
   inverted,
   disabled,
   label,
+  loading,
   ...htmlButtonProps
 }: ButtonProps) => {
   return (
@@ -21,9 +23,10 @@ const Button = ({
         variant,
         className
       )}
+      disabled={disabled || loading} // button disabled when loading is true
       {...htmlButtonProps}
     >
-      {label}
+      {loading ? <Loader /> : label}
     </button>
   );
 };

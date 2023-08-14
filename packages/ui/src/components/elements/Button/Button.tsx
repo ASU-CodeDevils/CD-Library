@@ -25,7 +25,7 @@ const Button = ({
       disabled={disabled || loading} // button disabled when loading is true. 
       {...htmlButtonProps}
     >
-      {loading ? <i className="fa fa-spinner fa-spin"></i> : label} // show loading icon when loading = TRUE. 
+      {loading ? <i className="fa fa-spinner fa-spin"></i> : label}
     </button>
   );
 };

@@ -10,6 +10,7 @@ const Button = ({
   inverted,
   disabled,
   label,
+  loading, //added new prop
   ...htmlButtonProps
 }: ButtonProps) => {
   return (
@@ -21,9 +22,10 @@ const Button = ({
         variant,
         className
       )}
+      disabled={disabled || loading} // disable the button when loading is true
       {...htmlButtonProps}
     >
-      {label}
+      {loading ? <i className="fa fa-spinner fa-spin"></i> : label} // show loading icon when loading = TRUE. 
     </button>
   );
 };

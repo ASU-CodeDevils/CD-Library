@@ -1,26 +1,27 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { StoryObj, Meta } from "@storybook/react";
 
 import { Input } from "@codedevils/ui";
-import "@cd/ui-styles/dist/cdui.css";
+import "@codedevils/ui-styles/dist/cdui.css";
 
 //👇 This default export determines where your story goes in the story list
-export default {
+const meta: Meta<typeof Input> = {
   /* 👇 The title prop is optional.
    * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
    * to learn how to generate automatic titles
    */
   title: "Elements/Input",
   component: Input,
-} as ComponentMeta<typeof Input>;
+};
 
-//👇 We create a “template” of how args map to rendering
-const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
+export default meta;
 
-export const Primary = Template.bind({});
+type Story = StoryObj<typeof Input>;
 
-Primary.args = {
-  label: "Hello",
-  loading: false,
-  placeholder: "Input...",
-  disabled: false,
+export const Primary: Story = {
+  args: {
+    label: "Hello",
+    loading: false,
+    placeholder: "Input...",
+    disabled: false,
+  },
 };

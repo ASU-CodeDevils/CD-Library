@@ -1,8 +1,8 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { StoryObj, Meta } from "@storybook/react";
 import { Button } from "@codedevils/ui";
-import "@cd/ui-styles/dist/cdui.css";
+import "@codedevils/ui-styles/dist/cdui.css";
 
-export default {
+const meta: Meta<typeof Button> = {
   title: "Elements/Button",
   component: Button,
   argTypes: {
@@ -17,15 +17,17 @@ export default {
       control: { type: "boolean" },
     },
   },
-} as ComponentMeta<typeof Button>;
+};
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+export default meta;
 
-export const Primary = Template.bind({});
+type Story = StoryObj<typeof Button>;
 
-Primary.args = {
-  label: "Button",
-  variant: "primary",
-  disabled: false,
-  inverted: false,
+export const Primary: Story = {
+  args: {
+    label: "Button",
+    variant: "primary",
+    disabled: false,
+    inverted: false,
+  },
 };

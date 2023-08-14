@@ -10,7 +10,7 @@ const Button = ({
   inverted,
   disabled,
   label,
-  loading, ///added new prop loading and det default value to false.  
+  loading, ///added new prop loading and det default value to false
   ...htmlButtonProps
 }: ButtonProps) => {
   return (

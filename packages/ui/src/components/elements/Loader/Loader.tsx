@@ -6,25 +6,25 @@ import { UI_CLASSNAME } from "../../..";
 
 function Loader({
   className,
-  text = "loading",
+  text = "Loading",
   disabled,
   inline,
   inverted,
   size,
 }: LoaderProps) {
   return (
-    <div
-      className={cx(
-        UI_CLASSNAME,
-        "loader",
-        { disabled: disabled, inline: inline, inverted: inverted },
-        size,
-        className
-      )}
-    >
-      <div className="icon"></div>
+    <>
+      <div
+        className={cx(
+          UI_CLASSNAME,
+          "spinner",
+          { disabled: disabled, inline: inline, inverted: inverted },
+          size,
+          className
+        )}
+      ></div>
       <span>{text}</span>
-    </div>
+    </>
   );
 }
 

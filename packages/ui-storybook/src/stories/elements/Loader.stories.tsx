@@ -9,7 +9,7 @@ const meta: Meta<typeof Loader> = {
   argTypes: {
     size: {
       control: { type: "select" },
-      options: ["small", "medium", "large"],
+      options: ["xs", "sm", "md", "lg"],
     },
   },
 };
@@ -20,10 +20,10 @@ type Story = StoryObj<typeof Loader>;
 
 export const Primary: Story = {
   args: {
-    text: "Loading",
+    text: "Loading...",
     disabled: false,
     inline: false,
     inverted: false,
-    size: "medium",
+    size: "md",
   },
 };

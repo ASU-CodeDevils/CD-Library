@@ -22,7 +22,7 @@ const Button = ({
         variant,
         className
       )}
-      disabled={disabled || loading} // button disabled when loading is true. 
+      disabled={disabled || loading} // button disabled when loading is true
       {...htmlButtonProps}
     >
       {loading ? <i className="fa fa-spinner fa-spin"></i> : label}

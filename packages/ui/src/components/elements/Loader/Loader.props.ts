@@ -14,7 +14,7 @@ export interface ILoaderProps {
   inverted?: boolean;
 
   /** The size of the loader, small, medium, large */
-  size?: "small" | "medium" | "large";
+  size?: "xs" | "sm" | "md" | "lg";
 }
 
 type LoaderProps = BaseComponentWithoutAs<ILoaderProps>;

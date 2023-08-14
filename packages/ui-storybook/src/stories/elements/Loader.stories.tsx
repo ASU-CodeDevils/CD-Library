@@ -1,9 +1,9 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { StoryObj, Meta } from "@storybook/react";
 
-import { Loader } from "@cd/ui";
-import "@cd/ui-styles/dist/cdui.css";
+import { Loader } from "@codedevils/ui";
+import "@codedevils/ui-styles/dist/cdui.css";
 
-export default {
+const meta: Meta<typeof Loader> = {
   title: "Elements/Loader",
   component: Loader,
   argTypes: {
@@ -12,16 +12,18 @@ export default {
       options: ["small", "medium", "large"],
     },
   },
-} as ComponentMeta<typeof Loader>;
+};
 
-const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />;
+export default meta;
 
-export const Primary = Template.bind({});
+type Story = StoryObj<typeof Loader>;
 
-Primary.args = {
-  text: "Loading",
-  disabled: false,
-  inline: false,
-  inverted: false,
-  size: "medium",
+export const Primary: Story = {
+  args: {
+    text: "Loading",
+    disabled: false,
+    inline: false,
+    inverted: false,
+    size: "medium",
+  },
 };

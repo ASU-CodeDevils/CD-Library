@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "sass scss dist --style compressed",
+    "build": "sass scss:dist --style compressed",
     "sass": "sass --watch scss dist --style compressed",
     "sass-help": "sass --help",
     "prepublish": "pnpm build"

@@ -14,6 +14,10 @@ const Button = ({
   loading,
   ...htmlButtonProps
 }: ButtonProps) => {
+  disabled = disabled || loading;
+
+  const innerText = loading ? <Loader size="xs" text="Loading..." /> : label;
+
   return (
     <button
       className={cx(
@@ -23,10 +27,9 @@ const Button = ({
         variant,
         className
       )}
-      disabled={disabled || loading} // button disabled when loading is true
       {...htmlButtonProps}
     >
-      {loading ? <Loader /> : label}
+      {innerText}
     </button>
   );
 };

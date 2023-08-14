@@ -16,6 +16,9 @@ const meta: Meta<typeof Button> = {
     inverted: {
       control: { type: "boolean" },
     },
+    loading: {
+      control: { type: "boolean" },
+    },
   },
 };
 
@@ -29,5 +32,6 @@ export const Primary: Story = {
     variant: "primary",
     disabled: false,
     inverted: false,
+    loading: false,
   },
 };

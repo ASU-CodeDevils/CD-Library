@@ -10,6 +10,8 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
   /** Text on button */
   label?: string;
+  /** Whether to show a loading icon on the button */
+  loading?: boolean;
 }
 
 type ButtonProps = BaseComponentWithoutAs<IButtonProps>;

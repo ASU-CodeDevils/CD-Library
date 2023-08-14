@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Image } from "@cd/ui";
+import { Image } from "@codedevils/ui";
 import "@cd/ui-styles/dist/cdui.css";
 
 // import imageFile from "../assets/sundevil.png";

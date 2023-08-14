@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Input } from "@cd/ui";
+import { Input } from "@codedevils/ui";
 import "@cd/ui-styles/dist/cdui.css";
 
 //👇 This default export determines where your story goes in the story list

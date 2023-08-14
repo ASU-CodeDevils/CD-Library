@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Button } from "@cd/ui";
+import { Button } from "@codedevils/ui";
 import "@cd/ui-styles/dist/cdui.css";
 
 export default {

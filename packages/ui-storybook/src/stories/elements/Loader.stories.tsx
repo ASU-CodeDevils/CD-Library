@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Loader } from "@cd/ui";
+import { Loader } from "@codedevils/ui";
 import "@cd/ui-styles/dist/cdui.css";
 
 export default {

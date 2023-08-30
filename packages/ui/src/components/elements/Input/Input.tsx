@@ -31,11 +31,6 @@ function Input({
    *
    * @returns The icon to display.
    */
-  // BUG: error TS2746: This JSX tag's 'children' prop expects a single child
-  // of type 'ReactNode', but multiple children were provided.
-
-  // restricting to have getIcon return only a single type
-  // This resolves initial error of multiple components
   const getIcon = () => {
     if (isIconName(icon)) {
       return <Icon name={icon} />;

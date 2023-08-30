@@ -23,5 +23,8 @@ export const Primary: Story = {
     loading: false,
     placeholder: "Input...",
     disabled: false,
+    error: false,
+    icon: "search",
+    tabIndex: 0,
   },
 };

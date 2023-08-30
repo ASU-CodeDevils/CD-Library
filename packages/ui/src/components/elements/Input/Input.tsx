@@ -57,7 +57,13 @@ function Input({
       )}
       {...inputHTMLProps}
     >
-      <input tabIndex={computeTabIndex()} {...inputHTMLProps} />
+            <input
+        tabIndex={computeTabIndex()}
+        disabled={disabled || loading} // Disable input when loading is true or disabled is true
+        {...inputHTMLProps}
+      />
+      {loading && <div>Loading...</div>} {/* Show loading state */}
+      {error && <div>Error: {error}</div>} {/* Show error state */}
       {children}
       {getIcon()}
     </div>

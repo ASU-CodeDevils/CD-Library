@@ -57,9 +57,9 @@ function Input({
       )}
       {...inputHTMLProps}
     >
-            <input
+      <input
         tabIndex={computeTabIndex()}
-        disabled={disabled || loading} // Disable input when loading is true or disabled is true
+        disabled={disabled || loading}
         {...inputHTMLProps}
       />
       {loading && <div>Loading...</div>} {/* Show loading state */}

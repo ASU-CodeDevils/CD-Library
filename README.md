@@ -2,13 +2,13 @@
 # CD-Library
 This project is a mono-repository containing NodeJS utilities, including:
 
-* `@cd/ui` - A [React](https://reactjs.org/) Component Library
-* `@cd/ui-storybook` - A [StorybookJS](https://storybook.js.org/) project for visualizing UI components
-* `@cd/ui-styles` - A [SCSS](https://sass-lang.com/) project containing all of CodeDevils' styling
+* `@codedevils/ui` - A [React](https://reactjs.org/) Component Library
+* `@codedevils/ui-storybook` - A [StorybookJS](https://storybook.js.org/) project for visualizing UI components
+* `@codedevils/ui-styles` - A [SCSS](https://sass-lang.com/) project containing all of CodeDevils' styling
 
 As of now, all projects are built off each other.
 
-## Installation
+## Contributing (Getting Started)
 
 ### Install Dependencies
 

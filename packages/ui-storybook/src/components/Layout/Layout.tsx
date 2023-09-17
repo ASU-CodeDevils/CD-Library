@@ -12,10 +12,12 @@ const Layout = ({ children }: LayoutProps) => {
     <div className="app">
       <div className={`app--nav${isHomePage ? ` hide` : ""}`}>
         <div className="app--nav__logo">
-          <img
-            src="https://codedevils.org/_next/image?url=%2Flogo-light.png&w=384&q=75"
-            alt="CodeDevils logo"
-          />
+          <a href="/CD-Library">
+            <img
+              src="https://codedevils.org/_next/image?url=%2Flogo-light.png&w=384&q=75"
+              alt="CodeDevils logo"
+            />
+          </a>
         </div>
       </div>
       <div className="app--content">{children}</div>

@@ -18,6 +18,14 @@ const Resources = () => {
       href: "https://sass-lang.com/",
       text: "The SASS Mark-up language (a CSS extension)",
     },
+    {
+      href: "https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html",
+      text: "TypeScript for the New Programmer",
+    },
+    {
+      href: "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html",
+      text: "TypeScript for JavaScript Programmers",
+    },
   ];
 
   return (

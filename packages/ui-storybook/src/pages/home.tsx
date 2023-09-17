@@ -27,7 +27,7 @@ const Home = () => {
           alt="logo"
         />
         <p>
-          This code is in <code>src/App.js</code>. Edit it, save it, and see how
+          This code is in <code>packages\ui-storybook\src\pages</code>. Edit it, save it, and see how
           it shows up here!
         </p>
         <div className="app-links">

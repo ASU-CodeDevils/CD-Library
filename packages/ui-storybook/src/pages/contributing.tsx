@@ -12,17 +12,15 @@ const Contributing = () => {
             ASU-CodeDevils GitHub
           </a>{" "}
           and on the{" "}
-          <a href="https://github.com/orgs/ASU-CodeDevils/teams/cd-library-team">
+          <a href="https://github.com/orgs/ASU-CodeDevils/teams/cd-library-devs">
             CD-Library Team
           </a>{" "}
           team
         </li>
         <li>
-          Be on the{" "}
-          <a href="https://codedevils.slack.com/archives/C0317D2S1CN">
-            react-library-dev
-          </a>{" "}
-          channel.
+          Join the CodeDevils{" "}
+          <a href="https://discord.gg/4yzCwh6bXC">Discord server</a>{" "}
+          and reach out to the project lead.
         </li>
       </ul>
       <Anchor text="Creating and Merging Branches" />

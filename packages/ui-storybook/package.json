@@ -21,6 +21,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "docs": "BUILD_PATH='../../docs' react-scripts build",
+    "docs-win": "set BUILD_PATH=../../docs&&react-scripts build",
     "predeploy": "pnpm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",

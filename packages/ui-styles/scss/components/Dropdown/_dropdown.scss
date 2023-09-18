@@ -1,0 +1,41 @@
+@import "../../lib/colors";
+@import "../../lib/fonts";
+@import "../../lib/mixins";
+@import "../../lib/variables";
+
+.dropdown {
+  display: inline-block;
+  min-width: 10rem;
+  margin: 1rem auto;
+  border: 5px solid transparent;
+  @include border-radius($border-radius);
+  transition: all 0.3s ease-in-out;
+  background-color: $color-white;
+  color: $color-asu-maroon;
+}
+
+.dropdown:hover {
+  border: 5px solid $color-darker-grey;
+}
+
+.dropdown-title {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-title,
+.dropdown-item {
+  padding: 1rem;
+  cursor: pointer;
+}
+.dropdown-item:last-child {
+  border-radius: 0px 0px 5px 5px;
+}
+
+.dropdown-item:hover {
+  background-color: $color-darker-grey;
+}

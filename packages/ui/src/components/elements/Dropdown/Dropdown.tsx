@@ -13,13 +13,15 @@ function Dropdown({
   disabled,
   inverted,
   tabIndex,
+  isSelection,
+  items,
 }: DropdownProps) {
   const computerTabIndex = () => {
     return disabled ? -1 : tabIndex;
   };
-  const options = ["React", "Item2", "Item3", "Vue"];
+
   const [isOpen, setIsOpen] = useState(false);
-  // const [selected, setSelected] = useState(String);
+  const [selected, setSelected] = useState<string | null>(null);
 
   return (
     <div
@@ -33,7 +35,7 @@ function Dropdown({
         className
       )}
     >
-      <div className="dropdown-content">
+      <div className={cx("dropdown-content", { disabled: disabled })}>
         <div
           tabIndex={computerTabIndex()}
           className="dropdown-title"
@@ -41,7 +43,11 @@ function Dropdown({
         >
           {/* <div>{selected ? selected : "Choose One"}</div>
            */}
-          <div>{label}</div>
+          {isSelection ? (
+            <div>{selected ? selected : label}</div>
+          ) : (
+            <div>{label}</div>
+          )}
           <div>
             <FontAwesomeIcon
               icon={faCaretDown}
@@ -53,9 +59,17 @@ function Dropdown({
           </div>
         </div>
         {isOpen &&
-          options.map((option, key) => (
-            <div key={key} className="dropdown-item">
-              {option}
+          items.map((item, index) => (
+            <div
+              key={index}
+              {...item.args}
+              onClick={() => {
+                setSelected(item.value);
+                setIsOpen(false);
+              }}
+              className="dropdown-item"
+            >
+              {item.value}
             </div>
           ))}
       </div>

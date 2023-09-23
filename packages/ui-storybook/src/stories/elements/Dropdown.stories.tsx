@@ -24,5 +24,14 @@ export const Primary: Story = {
     tabIndex: 0,
     isSelection: false,
     inverted: false,
+    items: [
+      {
+        value: "Option 1",
+        args: ["onClick = {alert('option1')}", "onClick = {alert('option1')}"],
+      },
+      { value: "Option 2" },
+      { value: "Option 3", args: ["onClick = {alert('option3')}"] },
+      { value: "Option 4" },
+    ],
   },
 };

@@ -1,5 +1,9 @@
 import { BaseComponentWithoutAs } from "../../..";
 
+type Items = {
+  value: string;
+  args?: string[];
+};
 export interface IDropdownProps {
   /** Whether the dropdown is disabled. */
   disabled?: boolean;
@@ -11,7 +15,7 @@ export interface IDropdownProps {
   inverted?: boolean;
 
   tabIndex?: number;
-
+  items: Array<Items>;
   // items: {};
 }
 

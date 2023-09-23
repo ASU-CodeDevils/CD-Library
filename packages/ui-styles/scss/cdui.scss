@@ -3,12 +3,14 @@
 @import "./components/loader/loader";
 @import "./components/image/image";
 @import "./components/button/button";
+@import "./components/dropdown/dropdown";
 
 .cdui {
   @include input;
   @include loader;
   @include image;
   @include button;
+  @include dropdown;
 
   @keyframes spin {
     from {

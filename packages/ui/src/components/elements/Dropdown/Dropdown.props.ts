@@ -2,12 +2,9 @@ import { BaseComponentWithoutAs } from "../../..";
 
 type Items = {
   value: string;
-  args?: string[];
+  onClick?: () => void;
 };
 export interface IDropdownProps {
-  /** Whether the dropdown is disabled. */
-  disabled?: boolean;
-
   label: string;
 
   isSelection: boolean;
@@ -15,8 +12,8 @@ export interface IDropdownProps {
   inverted?: boolean;
 
   tabIndex?: number;
+
   items: Array<Items>;
-  // items: {};
 }
 
 type DropdownProps = BaseComponentWithoutAs<IDropdownProps>;

@@ -5,9 +5,6 @@ const meta: Meta = {
   title: "Elements/Dropdown",
   component: Dropdown,
   argTypes: {
-    disabled: {
-      control: { type: "boolean" },
-    },
     inverted: {
       control: { type: "boolean" },
     },
@@ -20,17 +17,24 @@ type Story = StoryObj<typeof Dropdown>;
 export const Primary: Story = {
   args: {
     label: "Dropdown",
-    disabled: false,
     tabIndex: 0,
     isSelection: false,
     inverted: false,
     items: [
       {
         value: "Option 1",
-        args: ["onClick = {alert('option1')}", "onClick = {alert('option1')}"],
+        onClick: () => {
+          alert("Option 1 clicked!");
+        },
       },
-      { value: "Option 2" },
-      { value: "Option 3", args: ["onClick = {alert('option3')}"] },
+      {
+        value: "Option 2",
+        onClick: () => {
+          // Custom logic for Option 2
+          console.log("Option 2 clicked!");
+        },
+      },
+      { value: "Option 3" },
       { value: "Option 4" },
     ],
   },

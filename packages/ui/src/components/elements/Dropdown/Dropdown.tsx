@@ -4,78 +4,65 @@ import cx from "clsx";
 import DropdownProps from "./Dropdown.props";
 import { UI_CLASSNAME } from "../../..";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
-function Dropdown({
+const Dropdown = ({
   label = "Dropdown",
-  children,
   className,
-  disabled,
   inverted,
   tabIndex,
   isSelection,
   items,
-}: DropdownProps) {
-  const computerTabIndex = () => {
-    return disabled ? -1 : tabIndex;
-  };
-
+}: DropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
+
+  const selectOption = (value: string, onClick?: () => void) => {
+    setSelected(value);
+    setIsOpen(false);
+    if (onClick) {
+      onClick();
+    }
+  };
 
   return (
     <div
       className={cx(
         UI_CLASSNAME,
         "dropdown",
-        {
-          disabled: disabled,
-          inverted: inverted,
-        },
+        { inverted: inverted },
         className
       )}
+      tabIndex={tabIndex}
     >
-      <div className={cx("dropdown-content", { disabled: disabled })}>
-        <div
-          tabIndex={computerTabIndex()}
-          className="dropdown-title"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {/* <div>{selected ? selected : "Choose One"}</div>
-           */}
-          {isSelection ? (
-            <div>{selected ? selected : label}</div>
-          ) : (
-            <div>{label}</div>
-          )}
-          <div>
-            <FontAwesomeIcon
-              icon={faCaretDown}
-              style={{
-                transform: `rotate(${isOpen ? 180 : 0}deg)`,
-                transition: "all 0.3s ease-in-out",
-              }}
-            />
-          </div>
-        </div>
-        {isOpen &&
-          items.map((item, index) => (
+      <div className="dropbtn" onClick={() => setIsOpen(!isOpen)}>
+        {isSelection ? (
+          <span className="title">{selected ? selected : label}</span>
+        ) : (
+          <span className="title">{label}</span>
+        )}
+        <FontAwesomeIcon
+          className="faCaret"
+          icon={isOpen ? faCaretUp : faCaretDown}
+        />
+      </div>
+      {isOpen && (
+        <div className="dropdown__items">
+          {items.map((item, index) => (
             <div
+              className="dropdown__item"
               key={index}
-              {...item.args}
               onClick={() => {
-                setSelected(item.value);
-                setIsOpen(false);
+                selectOption(item.value, item.onClick);
               }}
-              className="dropdown-item"
             >
               {item.value}
             </div>
           ))}
-      </div>
-      {children}
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default Dropdown;

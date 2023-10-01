@@ -24,6 +24,7 @@ export const Primary: Story = {
       {
         value: "Option 1",
         onClick: () => {
+          // Custom logic for Option 1
           alert("Option 1 clicked!");
         },
       },

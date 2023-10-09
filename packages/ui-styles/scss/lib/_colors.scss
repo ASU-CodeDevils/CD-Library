@@ -11,7 +11,6 @@ $color-orange: #fc7a35;
 $color-yellow: #fcf235;
 $color-green: #6afc35;
 $color-blue: $color-kewl-blue;
-$color-black: $color-better-black;
 $color-white: #ffffff;
 
 $color-blue-1: $color-blue;
@@ -34,6 +33,28 @@ $color-background-light: $color-background;
 $color-background-inverted: $color-black;
 
 // ASU colors
+// Primary Colors
 $color-asu-maroon: #8c1d40;
-$color-light-grey: #e2e2e2;
-$color-darker-grey: #bcbcbc;
+$color-asu-gold: #FFC627;
+$color-asu-rich-black: #000000;
+$color-white: #ffffff;
+
+// Secondary Colors
+$color-asu-blue: #00A3E0;
+$color-asu-orange: #FF7F32;
+$color-asu-green: #78BE20;
+$color-asu-copper: #AF674B;
+$color-asu-gray: #747474;
+$color-asu-pink: #E74973;
+$color-asu-turquoise: #4AB7C4;
+
+// Gray Scale
+$color-gray-1: #191919;
+$color-gray-2: #484848;
+$color-gray-3: #BFBFBF;
+$color-gray-4: #D0D0D0;
+$color-gray-5: #E8E8E8;
+$color-gray-6: #FAFAFA;
+
+// Alert Colors
+$color-asu-error-red: #CC2F2F;

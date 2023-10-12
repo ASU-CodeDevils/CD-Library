@@ -7,20 +7,25 @@
   &.dropdown {
     color: $color-asu-maroon;
     background: $color-white;
-    width: 10rem;
+    font-size: 12px;
+    width: 100px;
+    cursor: pointer;
     border-radius: $dropdown-border-radius;
-    border: 0.3rem solid transparent;
+    border: 2px solid transparent;
 
     &:hover {
-      border-color: $color-light-grey;
+      border-color: $color-gray-5;
     }
 
     .dropbtn {
-      padding: 0.9rem;
+      padding: 8px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       transition: all 0.2s ease-in-out;
+    }
+    .title {
+      margin: 0;
     }
 
     .dropdown__items {
@@ -28,15 +33,15 @@
     }
 
     .dropdown__item {
-      padding: 0.9rem;
+      padding: 4px 8px;
       transition: all 0.2s ease-in-out;
 
       &:last-child {
-        margin-bottom: 0.5rem;
+        margin-bottom: 8px;
       }
 
       &:hover {
-        background-color: $color-light-grey;
+        background-color: $color-gray-5;
       }
     }
 
@@ -45,12 +50,12 @@
       color: $color-white;
 
       &:hover {
-        border-color: $color-darker-grey;
+        border-color: $color-asu-gray;
       }
 
       .dropdown__item {
         &:hover {
-          background-color: $color-darker-grey;
+          background-color: $color-asu-gray;
         }
       }
     }

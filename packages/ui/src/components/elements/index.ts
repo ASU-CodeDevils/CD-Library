@@ -4,3 +4,4 @@ export * from "./Loader";
 export * from "./Image";
 export * from "./Button";
 export * from "./Card";
+export * from "./Dropdown";

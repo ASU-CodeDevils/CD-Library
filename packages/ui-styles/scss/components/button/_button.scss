@@ -29,8 +29,8 @@
       }
 
       &.disabled {
-        background-color: $color-darker-grey;
-        color: $color-light-grey;
+        background-color: $color-asu-gray;
+        color: $color-gray-5;
         cursor: not-allowed;
       }
 
@@ -39,12 +39,12 @@
         color: $color-better-black;
 
         &:hover {
-          background-color: $color-light-grey;
+          background-color: $color-gray-5;
         }
 
         &.disabled {
-          background-color: $color-light-grey;
-          color: $color-darker-grey;
+          background-color: $color-gray-5;
+          color: $color-asu-gray;
           cursor: not-allowed;
         }
       }

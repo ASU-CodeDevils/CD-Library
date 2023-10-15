@@ -1,0 +1,63 @@
+@import "../../lib/colors";
+@import "../../lib/fonts";
+@import "../../lib/mixins";
+@import "../../lib/variables";
+
+@mixin dropdown {
+  &.dropdown {
+    color: $color-asu-maroon;
+    background: $color-white;
+    font-size: 12px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: $dropdown-border-radius;
+    border: 2px solid transparent;
+
+    &:hover {
+      border-color: $color-gray-5;
+    }
+
+    .dropbtn {
+      padding: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.2s ease-in-out;
+    }
+    .title {
+      margin: 0;
+    }
+
+    .dropdown__items {
+      cursor: pointer;
+    }
+
+    .dropdown__item {
+      padding: 4px 8px;
+      transition: all 0.2s ease-in-out;
+
+      &:last-child {
+        margin-bottom: 8px;
+      }
+
+      &:hover {
+        background-color: $color-gray-5;
+      }
+    }
+
+    &.inverted {
+      background: $color-asu-maroon;
+      color: $color-white;
+
+      &:hover {
+        border-color: $color-asu-gray;
+      }
+
+      .dropdown__item {
+        &:hover {
+          background-color: $color-asu-gray;
+        }
+      }
+    }
+  }
+}

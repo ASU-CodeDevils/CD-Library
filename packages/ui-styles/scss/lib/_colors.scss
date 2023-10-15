@@ -1,3 +1,30 @@
+// ASU colors
+// Primary Colors
+$color-asu-maroon: #8c1d40;
+$color-asu-gold: #ffc627;
+$color-asu-rich-black: #000000;
+$color-white: #ffffff;
+
+// Secondary Colors
+$color-asu-blue: #00a3e0;
+$color-asu-orange: #ff7f32;
+$color-asu-green: #78be20;
+$color-asu-copper: #af674b;
+$color-asu-gray: #747474;
+$color-asu-pink: #e74973;
+$color-asu-turquoise: #4ab7c4;
+
+// Gray Scale
+$color-gray-1: #191919;
+$color-gray-2: #484848;
+$color-gray-3: #bfbfbf;
+$color-gray-4: #d0d0d0;
+$color-gray-5: #e8e8e8;
+$color-gray-6: #fafafa;
+
+// Alert Colors
+$color-asu-error-red: #cc2f2f;
+
 // brand colors
 $color-kewl-blue: #057fa8;
 $color-bubbly-blue: #07a6db;
@@ -11,7 +38,6 @@ $color-orange: #fc7a35;
 $color-yellow: #fcf235;
 $color-green: #6afc35;
 $color-blue: $color-kewl-blue;
-$color-black: $color-better-black;
 $color-white: #ffffff;
 
 $color-blue-1: $color-blue;
@@ -21,7 +47,7 @@ $color-grey-1: $color-new-navy;
 $color-grey-2: $color-shady-grey;
 
 // site colors
-$color-primary: $color-black;
+$color-primary: $color-asu-rich-black;
 $color-primary-light: $color-primary;
 $color-primary-inverted: $color-white;
 
@@ -31,9 +57,4 @@ $color-secondary-inverted: $color-secondary;
 
 $color-background: $color-white;
 $color-background-light: $color-background;
-$color-background-inverted: $color-black;
-
-// ASU colors
-$color-asu-maroon: #8c1d40;
-$color-light-grey: #e2e2e2;
-$color-darker-grey: #bcbcbc;
+$color-background-inverted: $color-asu-rich-black;

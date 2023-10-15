@@ -1,0 +1,16 @@
+@import "../../lib/colors";
+@import "../../lib/fonts";
+@import "../../lib/mixins";
+@import "../../lib/variables";
+
+@mixin card {
+  &.card {
+    position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    display: inline-block;
+    @include border-radius($card-border-radius);
+    cursor: pointer;
+  }
+}

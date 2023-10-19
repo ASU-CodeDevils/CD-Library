@@ -13,6 +13,7 @@ const Dropdown = ({
   tabIndex,
   isSelection,
   maxLength = 10,
+  maxItemLength = 10,
   items,
 }: DropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +29,6 @@ const Dropdown = ({
 
   const truncatedContent =
     label.length > maxLength ? label.slice(0, maxLength) + "..." : label;
-
   return (
     <div
       className={cx(
@@ -48,7 +48,9 @@ const Dropdown = ({
         ) : (
           <span className="title">
             {truncatedContent}
-            <span className="tooltiptext">{label}</span>
+            {label.length > maxLength && (
+              <span className="tooltiptext">{label}</span>
+            )}
           </span>
         )}
         <FontAwesomeIcon
@@ -66,7 +68,12 @@ const Dropdown = ({
                 selectOption(item.value, item.onClick);
               }}
             >
-              {item.value}
+              {item.value.length > maxItemLength
+                ? item.value.slice(0, maxLength) + "..."
+                : item.value}
+              {item.value.length > maxItemLength && (
+                <span className="itemtooltiptext">{item.value}</span>
+              )}
             </div>
           ))}
         </div>

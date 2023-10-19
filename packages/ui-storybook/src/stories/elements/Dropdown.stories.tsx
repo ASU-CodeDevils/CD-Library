@@ -19,6 +19,7 @@ export const Primary: Story = {
     label: "Dropdown",
     tabIndex: 0,
     maxLength: 10,
+    maxItemLength: 10,
     isSelection: false,
     inverted: false,
     items: [

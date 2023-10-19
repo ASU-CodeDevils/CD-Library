@@ -17,6 +17,8 @@ export interface IDropdownProps {
   tabIndex?: number;
   /** Max lenght of label */
   maxLength?: number;
+  /** Max length of item label */
+  maxItemLength?: number;
   /** Dropdown list item */
   items: Array<Items>;
 }

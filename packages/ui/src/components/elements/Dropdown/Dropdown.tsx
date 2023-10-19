@@ -12,6 +12,7 @@ const Dropdown = ({
   inverted,
   tabIndex,
   isSelection,
+  maxLength = 10,
   items,
 }: DropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,9 @@ const Dropdown = ({
     }
   };
 
+  const truncatedContent =
+    label.length > maxLength ? label.slice(0, maxLength) + "..." : label;
+
   return (
     <div
       className={cx(
@@ -37,9 +41,15 @@ const Dropdown = ({
     >
       <div className="dropbtn" onClick={() => setIsOpen(!isOpen)}>
         {isSelection ? (
-          <span className="title">{selected ? selected : label}</span>
+          <span className="title">
+            {selected ? selected : truncatedContent}
+            <span className="tooltiptext">{label}</span>
+          </span>
         ) : (
-          <span className="title">{label}</span>
+          <span className="title">
+            {truncatedContent}
+            <span className="tooltiptext">{label}</span>
+          </span>
         )}
         <FontAwesomeIcon
           className="faCaret"

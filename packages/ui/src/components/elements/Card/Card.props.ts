@@ -1,4 +1,4 @@
-import { ImgHTMLAttributes, ReactElement } from "react";
+import { ReactElement } from "react";
 import { BaseComponentWithoutAs } from "../../..";
 
 export interface ICardProps {

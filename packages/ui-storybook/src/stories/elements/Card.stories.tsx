@@ -32,9 +32,9 @@ type Story = StoryObj<typeof Card>;
 
 export const Default: Story = {
   args: {
-    title: "Card Title",
-    content: "Card Content",
-    image: "https://placeimg.com/640/480/any",
+    title: "Yosemite",
+    content: "Yosemite National Park is in California’s Sierra Nevada mountains.",
+    image: "https://picsum.photos/200/300",
     size: "md",
     variant: "plain",
     color: "default",

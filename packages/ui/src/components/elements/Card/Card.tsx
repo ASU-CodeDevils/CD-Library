@@ -17,15 +17,20 @@ const Card = ({
   video,
 }: CardProps) => {
   return (
-    <div className="card">
+    <div
+      className={cx(UI_CLASSNAME, "card", size, variant, color, className, {
+        imageFilled: imageFilled,
+        videoFilled: videoFilled,
+      })}
+    >
       <div className="card__image">
-        <div className="image">
-          {typeof image === "string" ? (
-            <img src={image} alt="Placeholder image" />
-          ) : (
-            image
-          )}
-        </div>
+        {/* <div className="image"> */}
+        {typeof image === "string" ? (
+          <img src={image} alt="Placeholder image" />
+        ) : (
+          image
+        )}
+        {/* </div> */}
       </div>
       <div className="card__content">
         <div className="card-content-title">{title}</div>

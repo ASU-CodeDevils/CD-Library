@@ -4,6 +4,7 @@
 @import "./components/image/image";
 @import "./components/button/button";
 @import "./components/dropdown/dropdown";
+@import "./components/card/card";
 
 .cdui {
   @include input;
@@ -11,6 +12,7 @@
   @include image;
   @include button;
   @include dropdown;
+  @include card;
 
   @keyframes spin {
     from {

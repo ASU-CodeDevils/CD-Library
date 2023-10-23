@@ -9,8 +9,10 @@ const Card = ({
   size,
   variant,
   color,
-  imageFilled,
-  videoFilled,
+  isFilled,
+  isImage,
+  imgTitle,
+  isNormal,
   title,
   content,
   image,
@@ -18,23 +20,36 @@ const Card = ({
 }: CardProps) => {
   return (
     <div
-      className={cx(UI_CLASSNAME, "card", size, variant, color, className, {
-        imageFilled: imageFilled,
-        videoFilled: videoFilled,
-      })}
+      className={cx(
+        UI_CLASSNAME,
+        "card",
+        { isFilled, isNormal },
+        size,
+        variant,
+        color,
+        className
+      )}
     >
       <div className="card__image">
-        {/* <div className="image"> */}
-        {typeof image === "string" ? (
-          <img src={image} alt="Placeholder image" />
-        ) : (
-          image
-        )}
-        {/* </div> */}
+        <div className="image">
+          {isNormal ? null : isImage ? (
+            typeof image === "string" ? (
+              <img src={image} alt={imgTitle} />
+            ) : (
+              image
+            )
+          ) : typeof video === "string" ? (
+            <video autoPlay loop muted>
+              <source src={video} type="video/mp4" />
+            </video>
+          ) : (
+            video
+          )}
+        </div>
       </div>
       <div className="card__content">
-        <div className="card-content-title">{title}</div>
-        <div className="card-content">{content}</div>
+        <div className="card__content-title">{title}</div>
+        <div className="card__content-description">{content}</div>
       </div>
     </div>
   );

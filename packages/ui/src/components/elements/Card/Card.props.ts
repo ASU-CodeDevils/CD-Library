@@ -9,11 +9,15 @@ export interface ICardProps {
   /** Whether the card color is default, inverted or gold */
   color?: "default" | "inverted" | "gold";
   /** Whether the card image is fill */
-  imageFilled?: boolean;
-  /** Whether the card video is fill */
-  videoFilled?: boolean;
+  isFilled?: boolean;
+  /** Whether the card has image or video */
+  isImage?: boolean;
+  /** Whether the card has image, video or not */
+  isNormal?: boolean;
   /** Text on card */
   title?: string;
+  /** Alt of image */
+  imgTitle?: string;
   /** Content on card */
   content?: string;
   /** Image on card */

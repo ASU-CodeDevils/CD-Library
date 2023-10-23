@@ -18,10 +18,7 @@ const meta: Meta<typeof Card> = {
       control: { type: "select" },
       options: ["default", "inverted", "gold"],
     },
-    imageFilled: {
-      control: { type: "boolean" },
-    },
-    videoFilled: {
+    isFilled: {
       control: { type: "boolean" },
     },
   },
@@ -33,12 +30,16 @@ type Story = StoryObj<typeof Card>;
 export const Default: Story = {
   args: {
     title: "Yosemite",
-    content: "Yosemite National Park is in California’s Sierra Nevada mountains.",
+    content:
+      "Yosemite National Park is in California’s Sierra Nevada mountains.",
     image: "https://picsum.photos/200/300",
+    imgTitle: "Yosemite",
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
     size: "md",
     variant: "plain",
     color: "default",
-    imageFilled: false,
-    videoFilled: false,
+    isImage: true,
+    isFilled: false,
+    isNormal: false,
   },
 };
